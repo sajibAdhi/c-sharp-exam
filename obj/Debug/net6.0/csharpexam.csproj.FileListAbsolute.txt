@@ -1,0 +1,15 @@
+D:\csharpexam\bin\Debug\net6.0\csharpexam.exe
+D:\csharpexam\bin\Debug\net6.0\csharpexam.deps.json
+D:\csharpexam\bin\Debug\net6.0\csharpexam.runtimeconfig.json
+D:\csharpexam\bin\Debug\net6.0\csharpexam.dll
+D:\csharpexam\bin\Debug\net6.0\ref\csharpexam.dll
+D:\csharpexam\bin\Debug\net6.0\csharpexam.pdb
+D:\csharpexam\obj\Debug\net6.0\csharpexam.csproj.AssemblyReference.cache
+D:\csharpexam\obj\Debug\net6.0\csharpexam.GeneratedMSBuildEditorConfig.editorconfig
+D:\csharpexam\obj\Debug\net6.0\csharpexam.AssemblyInfoInputs.cache
+D:\csharpexam\obj\Debug\net6.0\csharpexam.AssemblyInfo.cs
+D:\csharpexam\obj\Debug\net6.0\csharpexam.csproj.CoreCompileInputs.cache
+D:\csharpexam\obj\Debug\net6.0\csharpexam.dll
+D:\csharpexam\obj\Debug\net6.0\ref\csharpexam.dll
+D:\csharpexam\obj\Debug\net6.0\csharpexam.pdb
+D:\csharpexam\obj\Debug\net6.0\csharpexam.genruntimeconfig.cache
