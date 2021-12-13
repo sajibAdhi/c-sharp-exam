@@ -1,61 +1,79 @@
 ﻿using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-     
-    namespace Exercise
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exercise
+{
+
+
+    public class Shape
     {
-        class Program
+        // A few example members
+        public int X { get; private set; }
+        public int Y { get; private set; }
+        public int Height { get; set; }
+        public int Width { get; set; }
+
+        // Virtual method
+        public virtual void Draw()
         {
-            static void Main(string[] args)
-            {
-                LaptopsConfigaration lp = new LaptopsConfigaration();
-     
-                lp.ShowDetails(LaptopsConfigaration.Lenove, LaptopsConfigaration.Price1000, LaptopsConfigaration.i3, LaptopsConfigaration.Ram2GB, LaptopsConfigaration.HD500GB);
-                Console.WriteLine("\n\n\n");
-     
-                lp.ShowDetails(LaptopsConfigaration.Dell, LaptopsConfigaration.Price1500, LaptopsConfigaration.i5, LaptopsConfigaration.Ram4GB, LaptopsConfigaration.HD1TB);
-                Console.WriteLine("\n\n\n");
-     
-                lp.ShowDetails(LaptopsConfigaration.Sony, LaptopsConfigaration.Price2000, LaptopsConfigaration.i9, LaptopsConfigaration.Ram8GB, LaptopsConfigaration.HD1TB);
-                Console.WriteLine("\n\n\n");
-     
-                Console.ReadKey();
-            }
-        }
-        class LaptopsConfigaration : LaptopsConfigarationBase
-        {
-            public void ShowDetails(string name, string price, string processor, string ram, string hdd)
-            {
-                Console.WriteLine("Name : "+name);
-                Console.WriteLine("Price : " + price);
-                Console.WriteLine("Processor : " + processor);
-                Console.WriteLine("Ram : " + ram);
-                Console.WriteLine("HDD : " + hdd);
-            }
-        }
-     
-        class LaptopsConfigarationBase
-        {        
-            public const string i3 = "i3";
-            public const string i5 = "i5";
-            public const string i7 = "i7";
-            public const string i9 = "i9";
-     
-            public const string Ram2GB = "2GB";
-            public const string Ram4GB = "4GB";
-            public const string Ram8GB = "8GB";
-     
-            public const string HD500GB = "500GB";
-            public const string HD1TB = "1TB";
-     
-            public const string Price1000 = "$1000";
-            public const string Price1500 = "$1500";
-            public const string Price2000 = "$2000";
-     
-            public const string Lenove = "Lenovo";
-            public const string Sony = "Sony";
-            public const string Dell = "Dell";
+            Console.WriteLine("Performing base class drawing tasks");
         }
     }
+
+    class Circle : Shape
+    {
+        public override void Draw()
+        {
+            // Code to draw a circle...
+            Console.WriteLine("Drawing a circle");
+            base.Draw();
+        }
+    }
+    class Rectangle : Shape
+    {
+        public override void Draw()
+        {
+            // Code to draw a rectangle...
+            Console.WriteLine("Drawing a rectangle");
+            base.Draw();
+        }
+    }
+    class Triangle : Shape
+    {
+        public override void Draw()
+        {
+            // Code to draw a triangle...
+            Console.WriteLine("Drawing a triangle");
+            base.Draw();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            System.Collections.Generic.List<Shape> shapes = new System.Collections.Generic.List<Shape>();
+            shapes.Add(new Rectangle());
+            shapes.Add(new Triangle());
+            shapes.Add(new Circle());
+
+            // Polymorphism at work #2: the virtual method Draw is
+            // invoked on each of the derived classes, not the base class.
+            foreach (Shape s in shapes)
+            {
+                s.Draw();
+            }
+
+            // Keep the console open in debug mode.
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
+
+    }
+
+
+}
