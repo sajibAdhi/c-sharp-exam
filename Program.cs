@@ -1,38 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Exam{
+    class Customer{
+        public string fullName = null!;
+        public string id = null;
+        public string address = null!;
+        public string phone = null!;
+        public string email = null!;
 
-namespace Exercise
-{
+        //create a constructor that takes two arguments
+        public Customer(string fullName, string address){
+            Console.WriteLine("full name: " + fullName);
+            Console.WriteLine("address: " + address);
+        }
+        //create a constructor that takes all the properties as parameters and displays them in the console
+        public Customer(string fullName, string id, string address, string phone, string email){
+            Console.WriteLine("Full Name: " + fullName);
+            Console.WriteLine("id: " + id);
+            Console.WriteLine("address: " + address);
+            Console.WriteLine("phone: " + phone);
+            Console.WriteLine("email: " + email);
+        }
+
+    }
+
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-
+            Customer intro = new Customer("Sajib Adhikary", "Kallyanpur Dhaka");
+            Console.WriteLine("\n");
+            Customer info = new Customer("Sajib Adhikary", "CSE1901016103", "kallyanpur dhaka", "01400593322", "tosajibadhi@gmail.com");
         }
     }
-    class Customer
-    {
-        public string name { get; set; }
-
-        public string id { get; set; }
-        public string address { get; set; }
-        public string phone { get; set; }
-        public string email { get; set; }
-
-        public Customer(string name)
-        {
-            Name = name;
-        }
-        public void ShowDetails(string name, string price, string processor, string ram, string hdd)
-        {
-            Console.WriteLine("Name : " + name);
-            Console.WriteLine("Price : " + price);
-            Console.WriteLine("Processor : " + processor);
-            Console.WriteLine("Ram : " + ram);
-            Console.WriteLine("HDD : " + hdd);
-        }
-    }
+    
 }
